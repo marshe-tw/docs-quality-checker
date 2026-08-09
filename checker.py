@@ -12,20 +12,20 @@ antwort = client.messages.create(
     model="claude-sonnet-4-5",
     max_tokens=1000,
     messages=[
-    {"role": "user", "content": f"""Du bist ein erfahrener Technical Writer und Dokumentations-Reviewer.
+    {"role": "user", "content": f"""You are an experienced Technical Writer and documentation reviewer.
 
-Analysiere die folgende Markdown-Dokumentation und gib einen strukturierten Report zurück mit genau diesen drei Abschnitten:
+Analyze the following Markdown documentation and return a structured report with exactly these three sections:
 
-## Klarheit
-Ist der Text verständlich geschrieben? Gibt es verwirrende oder unklare Stellen?
+## Clarity
+Is the text written clearly? Are there any confusing or unclear parts?
 
-## Fehlende Informationen
-Welche wichtigen Informationen fehlen, die ein Leser erwarten würde?
+## Missing Information
+What important information is missing that a reader would expect?
 
-## Inkonsistente Begriffe
-Werden Begriffe uneinheitlich verwendet (z.B. Groß-/Kleinschreibung, unterschiedliche Bezeichnungen für dasselbe)?
+## Inconsistent Terminology
+Are terms used inconsistently (e.g. capitalization, different names for the same thing)?
 
-Hier ist die Dokumentation:
+Here is the documentation:
 
 {inhalt}"""}
     ]

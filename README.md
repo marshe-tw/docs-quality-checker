@@ -1,13 +1,21 @@
 # Docs-Quality-Checker
 
-A Python tool that analyzes Markdown documentation using the Claude API and generates a quality report.
+A Python tool that analyzes Markdown documentation using the Claude API and generates a structured quality report — built to learn API integration, prompt engineering, and automated documentation review.
 
-## What it does
+## About this project
 
-The tool reads a Markdown file and checks it for:
+This project was built as a learning exercise to practice:
+
+- **Python fundamentals** – reading files, working with environment variables
+- **Claude API integration** – sending structured prompts and handling responses
+- **Prompt engineering** – designing prompts that return consistent, structured output
+- **Secure API key handling** – using environment variables instead of hardcoding secrets
+
+## What it checks
+
 - **Clarity** – Is the content easy to understand?
-- **Missing information** – What important details are missing?
-- **Inconsistent terminology** – Are terms used inconsistently (e.g. capitalization, naming)?
+- **Missing Information** – What important details are missing?
+- **Inconsistent Terminology** – Are terms used inconsistently (e.g. capitalization, naming)?
 
 ## How it works
 
@@ -38,14 +46,19 @@ The tool reads a Markdown file and checks it for:
 Input: `example.md` – a guide on creating strong passwords
 Output: `report.md` – a structured quality report
 
-## What I learned
-
-This was my first Python project. I learned how to:
-- Work with files in Python
-- Use environment variables to keep API keys secure
-- Call the Claude API and structure prompts for consistent output
-
 ## Tech stack
 
-- Python 3
-- Claude API (Anthropic)
+| Tool | Purpose |
+|------|---------|
+| Python 3 | Core language |
+| Claude API (Anthropic) | Documentation analysis |
+| Markdown | Input/output format |
+
+## What I learned
+
+This was my first Python project. I learned how to work with files in Python, use environment variables to keep API keys secure, and call the Claude API with structured prompts to get consistent output.
+
+## Author
+
+**Mohamed Arshe** – Technical Writer
+[LinkedIn](https://linkedin.com/in/mohamed-arshe-083b712ba) · [GitHub](https://github.com/marshe-tw)
