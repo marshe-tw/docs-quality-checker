@@ -1,3 +1,4 @@
+import sys
 import os
 from anthropic import Anthropic
 
@@ -5,7 +6,14 @@ api_key = os.environ.get("ANTHROPIC_API_KEY")
 
 client = Anthropic(api_key=api_key)
 
-with open("example.md", "r") as datei:
+if len(sys.argv) < 2:
+    print("⚠️  Please provide a Markdown file to check.")
+    print("Example: python3 checker.py example.md")
+    sys.exit(1)
+
+dateiname = sys.argv[1]
+
+with open(dateiname, "r") as datei:
     inhalt = datei.read()
 
 antwort = client.messages.create(
@@ -36,4 +44,4 @@ print(antwort.content[0].text)
 with open("report.md", "w") as report_datei:
     report_datei.write(antwort.content[0].text)
 
-print("\n✅ Report gespeichert als report.md")
+print("\n✅ Report saved as report.md")

@@ -36,9 +36,9 @@ This project was built as a learning exercise to practice:
    export ANTHROPIC_API_KEY="your-api-key-here"
 ```
 
-3. Run the checker:
+3. Run the checker on any Markdown file:
 ```bash
-   python3 checker.py
+   python3 checker.py example.md
 ```
 
 ## Example
@@ -56,7 +56,7 @@ Output: `report.md` – a structured quality report
 
 ## What I learned
 
-This was my first Python project. I learned how to work with files in Python, use environment variables to keep API keys secure, and call the Claude API with structured prompts to get consistent output.
+This was my first Python project. I learned how to work with files in Python, use environment variables to keep API keys secure, call the Claude API with structured prompts to get consistent output, and handle command-line arguments to make the tool flexible for any input file.
 
 ## Author
 
